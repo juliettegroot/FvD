@@ -43,8 +43,8 @@
 /*********************/
 :root {
 	/* colors */
-	--color-main:#111;
-	--color-background: #a8c0db;
+	--color-lightmode:#111;
+	--color-bg-lightmode: #a8c0db;
 
 	/* fonts */
 	--main-font: pixarfont;
@@ -58,15 +58,24 @@
  /* STYLING */
 /***********/
 body {
-  font-family: var(--main-font);
-  color: var(--color-main);
-  background-color: var(--color-background);
+	color: var(--color-lightmode);
+	background-color: var(--color-bg-lightmode);
+  	font-family: var(--main-font);
+
+	  height:100vh;
+
+	  display:grid;
+	  justify-items: center;
+	  align-items:center;
 }
 
-/*logo verplaatsen*/
+/* logo verplaatsen */
 h1 {
+	position:relative;
 	text-align: center;
-	margin-top: 12em;
+
+
+	background-color: gold;
 }
 
 span:nth-of-type(1), :nth-of-type(2), :nth-of-type(3), :nth-of-type(4), :nth-of-type(5) {
@@ -76,13 +85,62 @@ span:nth-of-type(1), :nth-of-type(2), :nth-of-type(3), :nth-of-type(4), :nth-of-
 }
 
 
-/*animation studios styling*/
+/* animation studios styling */
 span:nth-of-type(6) {
 	font-size: 12px;
 }
 
-/*animatie P*/
-@keyframes p {
+/* lamp styling */
+div {
+	position: absolute;
+	left:calc(34% - 1.25em);
+	bottom:100%;
+	width: 2.5em;
+
+	animation-name: lopen;
+	animation-duration: 2s;
+	animation-timing-function: linear;
+
+}
+
+@keyframes lopen {
+	0% {
+		transform:translateX(-40vw);
+	}
+	100% {
+		transform:translateX(0);
+	}
+}
+
+img {
+	display: block;
+	width: 100%;
+	height: auto;
+
+	animation-name: springen;
+	animation-duration: .25s;
+	animation-iteration-count: 8;
+	animation-timing-function: ease-out;
+
+	/* animation-name: lopende-lamp;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-out;
+	animation-delay: 2s; */
+}
+
+@keyframes springen {
+	0% {
+		transform:translateY(0);
+	}
+	100% {
+		transform:translateY(-50%);
+	}
+}
+
+
+/*animatie lopende lamp*/
+@keyframes lopende-lamp {
 	0% {
 	  transform: translatey(0);
 	}
@@ -110,51 +168,18 @@ span:nth-of-type(6) {
 	100% {
 	  transform: translatex(0em);
 	} 
-  }
+}
   
-  h1 span:nth-of-type(1)  {
-	animation-name: p;
-	animation-duration: 1s;
-	animation-iteration-count: infinite;
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   /************/
  /* DARKMODE */
 /************/
-@media (prefers-color-scheme:dark) {
-	:root{
-		--color: white;
-		--color-bg: darkblue;
+@media (prefers-color-scheme: dark) { 
+	:root {
+		--color-darkmode: white;
+		--color-bg-darkmode: darkblue;
 	}
 }
+  
+
+
