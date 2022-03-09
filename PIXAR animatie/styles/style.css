@@ -1,4 +1,5 @@
 /* CSS Document */
+
   /**************/
  /* CSS REMEDY */
 /**************/
@@ -17,14 +18,7 @@
   /*********/
  /* FONTS */
 /*********/
-@font-face {
-	font-family: 'eenfont';
-	src: url('../fonts/eenfont.woff2') format('woff2'),
-			 url('../fonts/eenfont.woff') format('woff');
 
-	font-weight: normal;
-	font-style: normal;
-}
 
 @font-face {
 	font-family: pixarfont;
@@ -62,20 +56,17 @@ body {
 	background-color: var(--color-bg-lightmode);
   	font-family: var(--main-font);
 
-	  height:100vh;
+	height:100vh;
 
-	  display:grid;
-	  justify-items: center;
-	  align-items:center;
+	display:grid;
+	justify-items: center;
+	align-items:center;
 }
 
 /* logo verplaatsen */
 h1 {
 	position:relative;
 	text-align: center;
-
-
-	background-color: gold;
 }
 
 span:nth-of-type(1), :nth-of-type(2), :nth-of-type(3), :nth-of-type(4), :nth-of-type(5) {
@@ -87,14 +78,33 @@ span:nth-of-type(1), :nth-of-type(2), :nth-of-type(3), :nth-of-type(4), :nth-of-
 
 /* animation studios styling */
 span:nth-of-type(6) {
+	position: absolute;
+	left: 17em;
+	top: 4em;
+
 	font-size: 12px;
+
+	animation-name: vliegen;
+	animation-duration: 4s;
+	animation-timing-function: ease-in;
 }
+
+@keyframes vliegen {
+	from {transform: translateX(20em);}
+	to   {transform: translateX(0);}
+
+}
+
+
+  /*****************/
+ /* LAMP ANIMATIE */
+/*****************/
 
 /* lamp styling */
 div {
 	position: absolute;
-	left:calc(34% - 1.25em);
-	bottom:100%;
+	left: calc(34% - 1.5em);
+	bottom: 100%;
 	width: 2.5em;
 
 	animation-name: lopen;
@@ -105,10 +115,10 @@ div {
 
 @keyframes lopen {
 	0% {
-		transform:translateX(-40vw);
+		transform: translateX(-40vw);
 	}
 	100% {
-		transform:translateX(0);
+		transform: translateX(0);
 	}
 }
 
@@ -122,13 +132,14 @@ img {
 	animation-iteration-count: 8;
 	animation-timing-function: ease-out;
 
-	/* animation-name: lopende-lamp;
+	/* animation-name: wiggle;
 	animation-duration: 2s;
 	animation-iteration-count: infinite;
 	animation-timing-function: ease-out;
 	animation-delay: 2s; */
 }
 
+/*springen*/
 @keyframes springen {
 	0% {
 		transform:translateY(0);
@@ -139,25 +150,25 @@ img {
 }
 
 
-/*animatie lopende lamp*/
-@keyframes lopende-lamp {
+/*animatie wiggle voor sprong op i*/
+@keyframes wiggle {
 	0% {
 	  transform: translatey(0);
 	}
 	
-	30% {
+	20% {
 	  transform: rotate(5deg);
 	}
 	
-	40% {
+	30% {
 	  transform: rotate(-5deg);
 	}
 	
-	50% {
+	40% {
 	  transform: rotate(5deg);
 	}
 	
-	60% {
+	50% {
 	  transform: rotate(-5deg);
 	}
 	
@@ -170,6 +181,38 @@ img {
 	} 
 }
   
+ /***************/
+ /* I ANIMATIE */
+/**************/
+span:nth-of-type(2)  {
+	animation-name: i;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	transform-origin: center bottom;
+  }
+
+@keyframes i {
+	0%   {
+    transform: none;
+  }
+	20%  {
+    transform: scale(1, .8);
+  }
+	40%  {
+    transform: none;
+  }
+	60%  {
+    transform: scale(1, .4);
+  }
+  80% {
+    transform: scale(1, .6);
+  }
+	100% {
+    transform: scale(1, .1);
+  }
+}
+
+
 
   /************/
  /* DARKMODE */
