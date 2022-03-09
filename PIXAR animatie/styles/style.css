@@ -151,7 +151,7 @@ img {
 
 
 /*animatie wiggle voor sprong op i*/
-@keyframes wiggle {
+/* @keyframes wiggle {
 	0% {
 	  transform: translatey(0);
 	}
@@ -179,12 +179,12 @@ img {
 	100% {
 	  transform: translatex(0em);
 	} 
-}
+} */
   
  /***************/
  /* I ANIMATIE */
 /**************/
-span:nth-of-type(2)  {
+/* span:nth-of-type(2)  {
 	animation-name: i;
 	animation-duration: 3s;
 	animation-iteration-count: infinite;
@@ -210,7 +210,7 @@ span:nth-of-type(2)  {
 	100% {
     transform: scale(1, .1);
   }
-}
+} */
 
 
 
