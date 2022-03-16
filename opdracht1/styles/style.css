@@ -1,0 +1,240 @@
+/* CSS Document */
+
+  /**************/
+ /* CSS REMEDY */
+/**************/
+*, *::after, *::before {
+	box-sizing:border-box;  
+  }
+  
+  button, summary {
+	  cursor: pointer;
+  }
+
+
+
+
+
+  /*********/
+ /* FONTS */
+/*********/
+
+
+@font-face {
+	font-family: pixarfont;
+	src: url(../fonts/CharlemagneStd-Bold.otf);
+	
+	font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+
+  /*********************/
+ /* CUSTOM PROPERTIES */
+/*********************/
+:root {
+	/* colors */
+	--color-lightmode:#111;
+	--color-bg-lightmode: #a8c0db;
+
+	/* fonts */
+	--main-font: pixarfont;
+}
+
+
+
+
+
+  /***********/
+ /* STYLING */
+/***********/
+body {
+	color: var(--color-lightmode);
+	background-color: var(--color-bg-lightmode);
+  	font-family: var(--main-font);
+
+	height:100vh;
+
+	display:grid;
+	justify-items: center;
+	align-items:center;
+}
+
+/* logo verplaatsen */
+h1 {
+	position:relative;
+	text-align: center;
+}
+
+span:nth-of-type(1), :nth-of-type(2), :nth-of-type(3), :nth-of-type(4), :nth-of-type(5) {
+	text-align: center;
+	margin: .8em;
+	font-size: 30px;
+}
+
+
+/* animation studios styling */
+span:nth-of-type(6) {
+	position: absolute;
+	left: 17em;
+	top: 5em;
+
+	font-size: 12px;
+
+	animation-name: vliegen;
+	animation-duration: 4s;
+	animation-timing-function: ease-in;
+}
+
+@keyframes vliegen {
+	from {transform: translateX(20em);}
+	to   {transform: translateX(0);}
+
+}
+
+
+  /*****************/
+ /* LAMP ANIMATIE */
+/*****************/
+
+/* lamp styling */
+div {
+	position: absolute;
+	left: calc(34% - 1.5em);
+	bottom: 100%;
+	top: -2.5em; 
+	width: 2.5em;
+
+	animation-name: lopen;
+	animation-duration: 2s;
+	animation-timing-function: linear;
+
+}
+
+@keyframes lopen {
+	0% {
+		transform: translateX(-40vw);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+img {
+	display: block;
+	width: 100%;
+	height: auto;
+
+	-webkit-animation: springen .25s, wiggle 2s;
+	-webkit-animation-delay: 0s, 2s;
+	animation-iteration-count: 8, 1;
+	animation-timing-function: ease-out;
+}
+
+/*springen*/
+@keyframes springen {
+	0% {
+		transform:translateY(0);
+	}
+	100% {
+		transform:translateY(-50%);
+	}
+}
+
+
+/*animatie wiggle voor sprong op i*/
+@keyframes wiggle {
+	0% {
+	  transform: translatey(0);
+	}
+	
+	10% {
+	  transform: rotate(5deg);
+	}
+	
+	20% {
+	  transform: rotate(-5deg);
+	}
+	
+	30% {
+	  transform: rotate(5deg);
+	}
+	
+	40% {
+	  transform: rotate(-5deg);
+	}
+	
+	50% {
+	  transform: translatey(-1em);
+	}
+	
+	60% {
+		transform: translatey(.1em);
+	}
+
+	70% {
+		transform: translatey(-.2em);
+	}  
+
+	80% {
+		transform: translatey(-1em);
+	}
+
+	90% {
+		transform: translatey(-1em);
+	}
+
+	100% {
+	  transform: translatex(0em);
+	} 
+}
+  
+ /***************/
+ /* I ANIMATIE */
+/**************/
+span:nth-of-type(2)  {
+	-webkit-animation: i 4s;
+	-webkit-animation-delay: 3.5s;
+	display: inline-block;
+	animation-iteration-count: 1;
+	transform-origin: center bottom;
+  }
+
+@keyframes i {
+	0%   {
+    transform: none;
+  }
+	20%  {
+    transform: scale(1, .8);
+  }
+	40%  {
+    transform: none;
+  }
+	60%  {
+    transform: scale(1, .4);
+  }
+  80% {
+    transform: scale(1, .6);
+  }
+	100% {
+    transform: scale(1, .1);
+  }
+}
+
+
+
+  /************/
+ /* DARKMODE */
+/************/
+@media (prefers-color-scheme: dark) { 
+	:root {
+		--color-darkmode: white;
+		--color-bg-darkmode: darkblue;
+	}
+}
+  
+
+
