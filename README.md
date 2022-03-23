@@ -44,6 +44,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Je storyboard:
   <img src="readme-images/storyboard.png" width="375px" alt="storyboard voor opdracht 1">
+ 
   Dit is het storyboard die ik heb gemaakt in week 1. Hierin laat ik zien wat voor animaties ik elke letter wil laten doen.
 
 
@@ -62,6 +63,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Je uitkomst - karakteristiek screenshot(s):
   <img src="readme-images/dummy-plaatje.svg" width="375px" alt="uitomst opdracht 1">
+  
   Dit is hoe mijn logo eruit ziet als de animatie klaar is.
 
 
@@ -108,7 +110,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Je ontwerp:
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="ontwerp opdracht 2">
+  <img src="readme-images/startscherm.png" width="375px" alt="startscherm ontwerp opdracht 2">
+   <img src="readme-images/bignoscherm.png" width="375px" alt="bignoscherm  ontwerp opdracht 2">
 
 
   ### Je ambitie: 
