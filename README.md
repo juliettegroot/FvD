@@ -111,8 +111,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Je ontwerp:
   <img src="readme-images/startscherm.png" width="375px" alt="startscherm ontwerp opdracht 2">
-   <img src="readme-images/bignoscherm.png" width="375px" alt="bignoscherm  ontwerp opdracht 2">
-
+  <img src="readme-images/bignoscherm.png" width="375px" alt="bignoscherm ontwerp opdracht 2">
+  <img src="readme-images/stempels.png" width="375px" alt="bignoscherm met stempels ontwerp opdracht 2">
 
   ### Je ambitie: 
   Aan deze technieken/punten wil ik werken:
